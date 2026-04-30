@@ -1,0 +1,20 @@
+{
+  "name": "contentnest",
+  "version": "1.0.0",
+  "description": "Headless CMS and Blog Platform",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "docker-compose up --build",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:all": "npm run build --workspaces --if-present",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
